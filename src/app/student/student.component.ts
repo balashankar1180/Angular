@@ -24,5 +24,8 @@ return this.students.filter( std => std.Gender === 'Male').length;
 getFemaleStudentsCount(): number {
 return this.students.filter( std => std.Gender === 'Female').length;
 }
-
+selectedStudentCountRadioButton: string = 'All';
+onStudentCountRadioButtonChange(selectedRadioButtonValue: string): void {
+this.selectedStudentCountRadioButton = selectedRadioButtonValue;
+}
 }  // Closing Component

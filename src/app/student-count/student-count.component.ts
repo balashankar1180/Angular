@@ -9,5 +9,9 @@ export class StudentCountComponent  {
 @Input() all: number;
 @Input() male: number;
 @Input() female: number;
-
+selectedRadioButtonValue: string = 'All';
+@Output() countRadioButtonSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
+onRadioButtonSelectionChange() {
+this.countRadioButtonSelectionChanged.emit(this.selectedRadioButtonValue);
+}
 }
