@@ -12,7 +12,8 @@ students: any[] = [
 { ID: 'std102', FirstName: 'Anurag', DOB: '10/14/1989', Gender: 'Male', CourseFee: 6666.00 },
 { ID: 'std103', FirstName: 'Priyanka', DOB: '7/24/1992', Gender: 'Female', CourseFee: 6543.15 },
 { ID: 'std104', FirstName: 'Hina', DOB: '8/19/1990', Gender: 'Female', CourseFee: 9000.50 },
-{ ID: 'std105', FirstName: 'Sambit', DOB: '4/12/1991', Gender: 'Male', CourseFee: 9876.54 }
+{ ID: 'std105', FirstName: 'Sambit', DOB: '4/12/1991', Gender: 'Male', CourseFee: 9876.54 },
+{ ID: 'std106', FirstName: 'Tarun', DOB: '4/10/1992', Gender: 'Male', CourseFee: 1278.55 }
 ]; // Closing Array
 getTotalStudentsCount(): number {
 return this.students.length;
