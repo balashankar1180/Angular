@@ -14,4 +14,14 @@ students: any[] = [
 { ID: 'std104', FirstName: 'Hina', DOB: '8/19/1990', Gender: 'Female', CourseFee: 9000.50 },
 { ID: 'std105', FirstName: 'Sambit', DOB: '4/12/1991', Gender: 'Male', CourseFee: 9876.54 }
 ]; // Closing Array
+getTotalStudentsCount(): number {
+return this.students.length;
 }
+getMaleStudentsCount(): number {
+return this.students.filter( std => std.Gender === 'Male').length;
+}
+getFemaleStudentsCount(): number {
+return this.students.filter( std => std.Gender === 'Female').length;
+}
+
+}  // Closing Component
