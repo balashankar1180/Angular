@@ -15,17 +15,16 @@ students: any[] = [
 { ID: 'std105', FirstName: 'Sambit', DOB: '4/12/1991', Gender: 'Male', CourseFee: 9876.54 },
 { ID: 'std106', FirstName: 'Tarun', DOB: '4/10/1992', Gender: 'Male', CourseFee: 1278.55 }
 ]; // Closing Array
-getTotalStudentsCount(): number {
-return this.students.length;
-}
-getMaleStudentsCount(): number {
-return this.students.filter( std => std.Gender === 'Male').length;
-}
-getFemaleStudentsCount(): number {
-return this.students.filter( std => std.Gender === 'Female').length;
-}
+getTotalStudentsCount(): number
+{ return this.students.length; }
+getMaleStudentsCount(): number
+{ return this.students.filter( std => std.Gender === 'Male').length; }
+getFemaleStudentsCount(): number
+{ return this.students.filter( std => std.Gender === 'Female').length; }
 selectedStudentCountRadioButton: string = 'All';
-onStudentCountRadioButtonChange(selectedRadioButtonValue: string): void {
-this.selectedStudentCountRadioButton = selectedRadioButtonValue;
-}
+/** This property will keep track of the radio button which is selected. We have set the default value to All, so all the students are displayed in the table by default. */
+onStudentCountRadioButtonChange(selectedRadioButtonValue: string): void
+{ this.selectedStudentCountRadioButton = selectedRadioButtonValue; }
+/**  Depending on the radio button which is selected, this method updates the "selectedStudentCountRadioButton" property. This method will be called when the child component (StudentCountComponent) raises the custom event - (countRadioButtonSelectionChanged). The event binding is specified in StudentList.component.html
+*/
 }  // Closing Component

@@ -6,8 +6,7 @@
 </thead>
 <tbody>
 <ng-container *ngFor="let student of students;">
-            <tr *ngIf="selectedStudentCountRadioButton=='All' ||
-                       selectedStudentCountRadioButton==student.Gender">
+<tr *ngIf="selectedStudentCountRadioButton=='All' || selectedStudentCountRadioButton==student.Gender">
 <td>{{student.ID}}</td>
 <td>{{student.FirstName}}</td>
 <td>{{student.Gender}}</td>      
