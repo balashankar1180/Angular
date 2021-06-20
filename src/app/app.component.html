@@ -1,5 +1,2 @@
-<h1>{{name}}</h1>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<app-simple></app-simple>
+Your Text : <input type="text" [(ngModel)]="userText"/>
+<app-simple [simpleInput]="userText"></app-simple>
