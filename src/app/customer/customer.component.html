@@ -1,0 +1,45 @@
+<p>
+customer works!
+</p>
+
+<div>
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+<label>Enter ID :</label>
+<input type="text" formControlName="id" />
+<br/>
+<label>Enter Name :</label>
+<input type="text" formControlName="name">
+<span style="color : red" *ngIf="this.customerForm.get('name')?.touched && this.customerForm.get('name')?.invalid">Name is required</span>
+<br/>
+
+
+<div formGroupName="address">
+<label>Enter City</label>
+<input type="text" formControlName="city">
+<br/>
+<label>Enter Pincode</label>
+<input type="text" formControlName="pincode">
+<br/>
+<label>Enter Street</label>
+<input type="text" formControlName="street">
+</div>
+<br/>
+<label>Enter Contact :</label>
+<input type="text" formControlName="contact" />
+<span style="color : red" *ngIf="this.customerForm.get('contact')?.touched && this.customerForm.get('contact')?.invalid">Name is required</span>
+<br/>
+<label>Enter Email :</label>
+<input type="text" formControlName="email" />
+<span style="color : red" *ngIf="this.customerForm.get('email')?.touched && this.customerForm.get('email')?.invalid">Name is required</span>
+
+<button type="submit" [disabled]="customerForm.invalid">Submit</button>
+</form>
+
+<p>{{data | json}}</p>
+
+
+
+
+
+</div>
