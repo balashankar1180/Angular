@@ -26,7 +26,7 @@ name : any;
       email : ["", Validators.required]
     })
   }
-
+// d
   onSubmit(){
    console.log("CUSTOMER DETAILS-->",this.customerForm.value);
    this.data = this.customerForm.value;
