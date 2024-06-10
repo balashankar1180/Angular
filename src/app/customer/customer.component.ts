@@ -11,6 +11,7 @@ export class CustomerComponent implements OnInit
 customerForm: FormGroup;
 data: any;
 name : any;
+showLoader : boolean = false;
   constructor(private fb : FormBuilder) { }
 
   ngOnInit() {
@@ -27,10 +28,15 @@ name : any;
     })
   }
 // d
-  onSubmit(){
-   console.log("CUSTOMER DETAILS-->",this.customerForm.value);
-   this.data = this.customerForm.value;
-this.name = this.customerForm.get("name").value;
-  }
+
+  onSubmit() {
+  this.showLoader = true;
+  setTimeout(() => {
+    this.data = this.customerForm.value;
+    this.showLoader = false; // Hide loader after setting data
+  }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+
 
 }

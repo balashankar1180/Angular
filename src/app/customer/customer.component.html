@@ -35,7 +35,7 @@ customer works!
 
 <button type="submit" [disabled]="customerForm.invalid">Submit</button>
 </form>
-<i *ngIf="true" style="font-size : 70px" class="fa-solid fa-spin fa-arrow-rotate-right"></i>
+<i *ngIf="showLoader" style="font-size : 70px" class="fa-solid fa-spin fa-rotate"></i>
 <p>{{data | json}}</p>
 
 
